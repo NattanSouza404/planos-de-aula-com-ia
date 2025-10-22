@@ -89,14 +89,11 @@ const gerarPlanoAula = async (pedido: PedidoCriacaoAula): Promise<any> => {
 
         const textoResposta = result.response.text();
 
-        // 💥 CORREÇÃO AQUI: Limpa o texto, removendo os delimitadores de bloco de código
         const jsonPuro = textoResposta
-        // Remove a abertura do bloco de código (ex: "```json" ou "```")
         .replace(/```json\s*/, '')
         .replace(/```\s*/, '')
-        // Remove o fechamento do bloco de código ("```") e espaços no final
         .replace(/\s*```$/, '')
-        .trim(); // Remove espaços em branco no início e no fim
+        .trim();
 
         const planoAula = JSON.parse(jsonPuro);
         planoAula.id = 0;
