@@ -104,6 +104,9 @@ Outros modelos que poderiam ter sido escolhidos são o Gemini 2.5 Flash Lite e o
 | pla_created_at              | Data e hora de criação do plano de aula.                                          |
 
 ## Referências
+
 [Documentação Oficial Supabase](https://supabase.com/docs)
+
 [Base Nacional Comum Curricular](https://basenacionalcomum.mec.gov.br/)
+
 [Google AI Studio](http://aistudio.google.com/)
