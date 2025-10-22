@@ -44,13 +44,13 @@ VITE_SUPABASE_ANON_KEY=<SUA_CHAVE_AQUI>
 
 É necessário ter uma conta e criar um projeto dentro do Supabase.
 
-Após isso, será necessário executar os scripts na pasta 'backend' desse repositório. Os scripts devem ser executados na aba 'SQL Editor' do Supabase e nessa ordem:
+Após isso, será necessário executar os scripts da pasta 'backend' desse repositório. Os scripts devem ser executados na aba 'SQL Editor' do Supabase e nessa ordem:
 
 1. tabelas.sql
 2. row_level_security.sql
 3. functions.sql
 
-Depois disso, vá para a aba de Edge Functions e adicione a Edge Function 'gerar-plano-aula' com script do arquivo 'gerar-plano-aula.ts' dentro da pasta 'backend/edgeFunctions'.
+Depois disso, vá para a aba de Edge Functions e adicione a Edge Function 'gerar-plano-aula' com o script do arquivo 'gerar-plano-aula.ts' dentro da pasta 'backend/edgeFunctions'.
 
 #### No frontend React
 
@@ -66,21 +66,21 @@ npm run dev
 ### Decisões técnicas tomadas
 
 #### Uso de React
-Optei pelo React porque possuo certa familiriaridade com ele. Também pode ir consultando outros projetos meus para agilizar a criação do frontend.
+Optei pelo React porque com ele foi possível ter certa agilidade na criação da tela, e também por eu possuir familiariade e outros projetos meus para usar de referência.
 
 #### Consulta dos planos de aula por funções
-Decidi usar funções do banco para consultar os planos de aula, principalmente para não expor no frontend a estrutura da tabela (plano de aula no front tem o atributo 'titulo', e não o nome da tabela 'pla_titulo').
+Decidi usar funções do banco para consultar os planos de aula. A razão era para não expor no frontend a estrutura da tabela (é mais correto retornar no frontend um plano de aula com o atributo 'titulo' ao invés de 'pla_titulo').
 
 Outra alternativa para as funções seria criar Views, mas optei pelas funções caso fosse necessário adicionar mais alguma lógica.
 
 ### Desafios encontrados e soluções
 
 #### Erros nas requisições
-Durante o desenvolvimento, foi necessário realizar várias requisições, muitas delas davam erro. Para resolver isso, foi necessário usar:
+Durante o desenvolvimento, foi necessário realizar várias requisições, muitas delas resultavam em erros. Para resolver isso, foi necessário usar:
 - Os logs da Edge Function pelo próprio Supabase
-- As Developer Tools do navegador.
+- As Developer Tools do navegador
 
-Nas Developer Tools do navegador, usei a função de Debug (usando Breakpoints) para acompanhar o fluxo de execução e os valores das variáveis e também utilizei a aba de 'Redes' (ou Network) para analisar as requisições do frontend e as respostas do Supabase.
+Nas Developer Tools do navegador, usei a função de Debug (usando Breakpoints) para acompanhar o fluxo de execução e os valores das variáveis e também utilizei a aba de 'Redes' (ou Network) para analisar as requisições do frontend e as respostas do backend.
 
 ### Descrição da estrutura de dados
 | Coluna                      | Comentário                                                                        |
