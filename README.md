@@ -63,6 +63,8 @@ cd frontend/
 npm run dev
 ```
 
+Ao iniciar o frontend, o terminal irá mostrar o link para o acesso do site, que por padrão é a url ```localhost:5173```.
+
 ### Decisões técnicas tomadas
 
 #### Uso de React
@@ -81,6 +83,12 @@ Durante o desenvolvimento, foi necessário realizar várias requisições, muita
 - As Developer Tools do navegador
 
 Nas Developer Tools do navegador, usei a função de Debug (usando Breakpoints) para acompanhar o fluxo de execução e os valores das variáveis e também utilizei a aba de 'Redes' (ou Network) para analisar as requisições do frontend e as respostas do backend.
+
+### Escolha do Modelo de IA
+
+Para gerar os planos de aula, foi escolhido o modelo Gemini 2.5 Flash. Ele é um modelo   gratuito e é bem equilibrado em questão de raciocíonio e velocidade, servindo bem para a tarefa.
+
+Outros modelos que poderiam ter sido escolhidos são o Gemini 2.5 Flash Lite e o Gemma. O Gemini 2.5 Flash Lite não foi escolhido por sacrificar um pouco do raciocínio, não sendo ideal para a criação de um plano de aula real e que leve em consideração a Base Comum Curricular Nacional. Também não escolhido o modelo Gemma por não ter o mesmo nível de consistência que o modelo do Gemini 2.5 Flash.
 
 ### Descrição da estrutura de dados
 | Coluna                      | Comentário                                                                        |
